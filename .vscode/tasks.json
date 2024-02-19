@@ -1,4 +1,43 @@
 {
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build and run",
+            "type": "shell",
+            "command": "g++ ${file} -o ${fileDirname}/${fileBasenameNoExtension} && ${fileDirname}/${fileBasenameNoExtension}",
+            //"command": "gcc -pthread -o ${fileDirname}/${fileBasenameNoExtension} ${file}",
+            "group": "build"
+        },
+        {
+            "type": "cppbuild",
+            "label": "C/C++: gcc-9 compilar archivo activo",
+            "command": "/usr/bin/gcc-9", //gcc -pthread -o threads main.c
+            "args": [
+                //"-fdiagnostics-color=always",
+                //"-g",
+                "${file}",
+                //"-pthread",
+                "-o",
+                //"threads",
+                "${fileDirname}/${fileBasenameNoExtension}",
+                //"${file}",
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Tarea generada por el depurador."
+        }
+    ]
+}
+
+/*{
     "tasks": [
         {
             "type": "cppbuild",
@@ -26,4 +65,4 @@
         }
     ],
     "version": "2.0.0"
-}
+}*/

@@ -99,7 +99,10 @@
         "typeinfo": "cpp",
         "set": "cpp",
         "map": "cpp",
-        "forward_list": "cpp"
+        "forward_list": "cpp",
+        "cstdarg": "cpp",
+        "optional": "cpp",
+        "sstream": "cpp"
     },
     "cmake.configureOnOpen": false,
     "C_Cpp.errorSquiggles": "disabled"

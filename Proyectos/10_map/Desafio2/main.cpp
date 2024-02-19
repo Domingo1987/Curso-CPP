@@ -21,12 +21,12 @@ int main(){
 
     it = palabras.begin();
     while(it!= palabras.end()){
-        //std::cout << "Palabra: " << *it << std::endl;
-        if(contador_palabras.contains(*it)){
+        std::cout << "Palabra: " << *it << std::endl;
+        /*if(contador_palabras.contains(*it)){
             contador_palabras[*it]=contador_palabras[*it]+1; 
         } else {
             contador_palabras.insert({*it, 1});
-        }
+        }*/
 
         it++;
     }
