@@ -4,6 +4,38 @@
         {
             "label": "build and run",
             "type": "shell",
+            "command": "g++",
+            "args": [
+                "${fileDirname}/*.cpp",
+                "-o",
+                "${fileDirname}/program"
+            ],
+            "options": {
+                "cwd": "${fileDirname}",
+                "shell": {
+                    "executable": "cmd.exe",
+                    "args": ["/d", "/c"]
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ]
+        }
+    ]
+}
+
+
+
+/*{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build and run",
+            "type": "shell",
             "command": "g++ ${file} -o ${fileDirname}/${fileBasenameNoExtension} && ${fileDirname}/${fileBasenameNoExtension}",
             //"command": "gcc -pthread -o ${fileDirname}/${fileBasenameNoExtension} ${file}",
             "group": "build"
@@ -36,7 +68,7 @@
         }
     ]
 }
-
+*/
 /*{
     "tasks": [
         {

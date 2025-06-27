@@ -1,3 +1,38 @@
+// .vscode/launch.json
+{
+    "version": "0.2.0",
+    "configurations": [
+
+        {
+            "name": "C++: Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            // El ejecutable que se lanzará es 'program' en la carpeta del archivo activo
+            "program": "${fileDirname}/program",
+            "args": [],
+            "stopAtEntry": false,
+            // Directorio de trabajo
+            "cwd": "${fileDirname}",
+            "environment": [],
+            // Puedes cambiarlo a true si prefieres abrir una consola externa
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\mingw64\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            // Previo al lanzamiento, ejecuta la tarea 'build and run' que compila todo
+            "preLaunchTask": "build and run"
+        }
+    ]
+}
+
+
+/*
 {
     "version": "0.2.0",
     "configurations": [
@@ -25,7 +60,7 @@
         }
     ]
   }
-
+*/
 
 /*{
     "version": "0.2.0",
